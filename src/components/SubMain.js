@@ -1,11 +1,10 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ApexChart from './ApexChart';
 import FormComp from './FormComp';
-import DataTable from './DataTable';
+import EditRowModelControlGrid from './EditRowModelControlGrid';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -32,7 +31,6 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 10,
     height: '90%',
     marginLeft: 10,
-    overflow: 'auto',
     marginTop: 10
   },
   paperR: {
@@ -61,7 +59,7 @@ export default function SubMain() {
       </Grid>
       <Grid item xs={7} className={classes.half}>
         <Paper elevation={0} className={classes.paperL}>
-          <DataTable />
+          <EditRowModelControlGrid />
         </Paper>
       </Grid>
     </Grid>
